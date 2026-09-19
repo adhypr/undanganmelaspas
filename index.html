@@ -1,486 +1,356 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Undangan Melaspas Rumah</title>
-
-    <!-- Fonts -->
+    <title>Undangan Melaspas Rumah – Keluarga I Gede Made Asmara</title>
+    <meta name="description" content="Undangan upacara Melaspas Rumah Keluarga Bapak I Gede Made Asmara, Sabtu 26 September 2026 di Wana Panti, Tabanan.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-
-    <!-- Tailwind CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- AOS Animation CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <!-- Custom Configuration untuk Tailwind -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'bali-gold': '#D4AF37',
-                        'bali-dark': '#2C1E16',
-                        'bali-light': '#F9F6F0',
-                        'bali-earth': '#8B5A2B',
+                        'gold':       '#C9A84C',
+                        'gold-light': '#E8CC80',
+                        'dark':       '#1A1008',
+                        'brown':      '#2C1A0E',
+                        'cream':      '#F5EFE0',
+                        'ivory':      '#FAF7F0',
+                        'earth':      '#7A4A22',
                     },
                     fontFamily: {
-                        'serif': ['"Playfair Display"', 'serif'],
-                        'sans': ['Poppins', 'sans-serif'],
+                        'display': ['"Cormorant Garamond"', 'serif'],
+                        'body':    ['Jost', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
-
     <style>
-        /* Fallback pattern Bali (Bunga/Ukiran sederhana) */
-        .bg-pattern {
-            background-color: #F9F6F0;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-
-        .cover-bg {
-            /* Silakan ganti URL di bawah dengan path gambar rumah Anda di folder assets/images */
-            background-color: #2C1E16;
-            /* Fallback color */
-            background-image: linear-gradient(rgba(44, 30, 22, 0.75), rgba(44, 30, 22, 0.9)), url('assets/images/cover-bg.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-
-        /* Styling untuk hide scrollbar tapi tetap bisa scroll */
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        /* Glassmorphism ringan */
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
+        *,*::before,*::after{box-sizing:border-box}
+        body{font-family:'Jost',sans-serif;background-color:#FAF7F0;color:#1A1008;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+        ::-webkit-scrollbar{width:0}
+        .cover-bg{background-color:#1A1008;background-image:linear-gradient(to bottom,rgba(26,16,8,.55) 0%,rgba(26,16,8,.88) 100%),url('assets/images/cover-bg.jpg');background-size:cover;background-position:center}
+        #ornament-gebyog,#ornament-penjor-l,#ornament-penjor-r{will-change:transform}
+        @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+        .float-photo{animation:float 5s ease-in-out infinite}
+        @keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+        .text-shimmer{background:linear-gradient(90deg,#C9A84C 20%,#F0D980 50%,#C9A84C 80%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 4s linear infinite}
+        [data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1)}
+        [data-reveal="left"]{transform:translateX(-28px)}
+        [data-reveal="right"]{transform:translateX(28px)}
+        [data-reveal="scale"]{transform:scale(.93)}
+        [data-reveal].is-visible{opacity:1;transform:translateY(0) translateX(0) scale(1)}
+        [data-delay="100"]{transition-delay:.1s}
+        [data-delay="200"]{transition-delay:.2s}
+        [data-delay="300"]{transition-delay:.3s}
+        [data-delay="400"]{transition-delay:.4s}
+        [data-delay="500"]{transition-delay:.5s}
+        .patra-line{display:flex;align-items:center;gap:12px}
+        .patra-line::before,.patra-line::after{content:'';flex:1;height:1px;background:linear-gradient(to right,transparent,rgba(201,168,76,.4),transparent)}
+        .glass-card{background:rgba(255,252,244,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(201,168,76,.22)}
+        .bg-patra{background-color:#FAF7F0;background-image:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C9A84C' fill-opacity='0.05'%3E%3Cpath d='M40 0 L50 15 L40 30 L30 15 Z'/%3E%3Cpath d='M0 40 L15 50 L30 40 L15 30 Z'/%3E%3Cpath d='M50 40 L65 50 L80 40 L65 30 Z'/%3E%3Cpath d='M40 50 L50 65 L40 80 L30 65 Z'/%3E%3C/g%3E%3C/svg%3E")}
+        .dudonan-table tbody tr:nth-child(even){background-color:rgba(201,168,76,.04)}
+        @media(prefers-reduced-motion:reduce){[data-reveal]{opacity:1!important;transform:none!important;transition:none!important}.float-photo{animation:none!important}.text-shimmer{animation:none!important}}
     </style>
 </head>
+<body class="font-body bg-ivory text-dark">
 
-<body
-    class="font-sans bg-bali-light text-bali-dark antialiased no-scrollbar selection:bg-bali-gold selection:text-white">
-
-    <!-- Audio Player (Hidden) -->
-    <!-- Masukkan file musik Anda ke folder assets/audio/ -->
     <audio id="bg-music" loop>
         <source src="assets/audio/background.mp3" type="audio/mpeg">
-        Browser Anda tidak mendukung elemen audio.
     </audio>
 
-    <!-- SECTION 1: COVER PAGE -->
-    <section id="cover"
-        class="relative min-h-screen flex flex-col justify-center items-center text-center p-6 cover-bg text-white overflow-hidden">
+    <!-- COVER -->
+    <section id="cover" class="cover-bg relative min-h-screen flex flex-col justify-center items-center text-center px-6 py-16 text-white overflow-hidden">
+        <div id="ornament-gebyog" class="absolute inset-0 z-0 pointer-events-none" style="opacity:.35">
+            <div class="w-full h-full" style="background:url('assets/images/gebyog_dark_1789783341330.jpg') center / 100% 100% no-repeat;mix-blend-mode:screen"></div>
+        </div>
+        <div id="ornament-penjor-l" class="absolute top-0 left-0 h-full z-0 pointer-events-none" style="width:clamp(80px,18vw,220px);opacity:.22">
+            <div class="w-full h-full" style="background:url('assets/images/penjor_dark_1789783331216.jpg') left top / cover no-repeat;mix-blend-mode:screen"></div>
+        </div>
+        <div id="ornament-penjor-r" class="absolute top-0 right-0 h-full z-0 pointer-events-none" style="width:clamp(80px,18vw,220px);opacity:.22;transform:scaleX(-1)">
+            <div class="w-full h-full" style="background:url('assets/images/penjor_dark_1789783331216.jpg') right top / cover no-repeat;mix-blend-mode:screen"></div>
+        </div>
 
-        <!-- Ornamen Atas -->
-        <div class="absolute top-8 left-1/2 transform -translate-x-1/2 w-40 opacity-80" data-aos="fade-down"
-            data-aos-duration="1500">
-            <!-- SVG Ornamen Bali Sederhana (Stylized) -->
-            <svg viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg"
-                class="text-bali-gold fill-current">
-                <path d="M100 0L120 20H80L100 0Z" opacity="0.8" />
-                <path d="M100 20L140 60H60L100 20Z" />
-                <path d="M50 30L60 40H40L50 30Z" opacity="0.6" />
-                <path d="M150 30L160 40H140L150 30Z" opacity="0.6" />
+        <div class="absolute top-6 left-0 right-0 flex justify-center z-10 pointer-events-none" style="opacity:.55">
+            <svg width="160" height="32" viewBox="0 0 160 32" fill="none">
+                <path d="M80 2 Q90 16 80 30 Q70 16 80 2Z" fill="#C9A84C" opacity=".7"/>
+                <path d="M60 10 Q68 20 60 30 Q52 20 60 10Z" fill="#C9A84C" opacity=".4"/>
+                <path d="M100 10 Q108 20 100 30 Q92 20 100 10Z" fill="#C9A84C" opacity=".4"/>
+                <line x1="0" y1="16" x2="54" y2="16" stroke="#C9A84C" stroke-opacity=".3" stroke-width=".8"/>
+                <line x1="106" y1="16" x2="160" y2="16" stroke="#C9A84C" stroke-opacity=".3" stroke-width=".8"/>
             </svg>
         </div>
 
-        <!-- Konten Utama Cover -->
-        <div class="z-10 w-full max-w-md mt-16" data-aos="zoom-in" data-aos-duration="1200">
-            <p class="text-xs md:text-sm tracking-[0.3em] uppercase mb-4 text-gray-300">Om Swastyastu</p>
-            <p class="text-sm md:text-base tracking-widest uppercase mb-2 text-gray-200">Undangan Upacara</p>
-            <h1 class="font-serif text-5xl md:text-6xl font-bold text-bali-gold mb-6 drop-shadow-lg leading-tight">
-                Melaspas<br>
-                <span class="text-3xl md:text-4xl text-white font-medium italic">Rumah</span>
+        <div class="z-10 w-full max-w-sm mx-auto flex flex-col items-center">
+            <p id="cover-supra" class="text-[10px] md:text-xs tracking-[.4em] uppercase mb-2 font-light" style="color:rgba(232,204,128,.65)">Om Swastyastu</p>
+            <p id="cover-sub" class="text-xs tracking-[.25em] uppercase mb-6 font-light" style="color:rgba(245,239,224,.5)">Undangan Upacara</p>
+            <h1 id="cover-title" class="font-display leading-none mb-2">
+                <span class="text-shimmer block" style="font-size:clamp(4rem,16vw,7rem);font-weight:700;letter-spacing:-.01em">Melaspas</span>
+                <span class="block font-light italic" style="font-size:clamp(1.75rem,6vw,2.75rem);color:rgba(245,239,224,.75);margin-top:-.2em">Rumah</span>
             </h1>
-
-            <div class="my-10 border-y border-bali-gold/40 py-8 relative">
-                <!-- Aksen Garis -->
-                <div
-                    class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-bali-gold rotate-45">
+            <div class="w-14 my-6 mx-auto" style="height:1px;background:rgba(201,168,76,.5)"></div>
+            <div id="cover-photo" class="float-photo mb-7">
+                <div class="relative inline-block">
+                    <div class="absolute inset-0 rounded-full" style="background:radial-gradient(circle,rgba(201,168,76,.28) 0%,transparent 70%);transform:scale(1.3)"></div>
+                    <!-- Ganti src dengan foto rumah Anda -->
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Rumah Keluarga I Gede Made Asmara"
+                        class="relative w-36 h-36 md:w-44 md:h-44 object-cover rounded-full"
+                        style="border:3px solid rgba(201,168,76,.7);box-shadow:0 0 0 6px rgba(201,168,76,.1),0 16px 48px rgba(0,0,0,.5)">
                 </div>
-                <div
-                    class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-3 h-3 bg-bali-gold rotate-45">
-                </div>
-
-                <p class="text-sm text-gray-300 mb-3">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
-                <!-- Nama tamu akan diisi dinamis via JavaScript dari parameter URL (?to=Nama) -->
-                <h2 id="guest-name" class="font-serif text-2xl md:text-3xl font-semibold text-bali-gold drop-shadow-md">
-                    Tamu Undangan</h2>
-                <p class="text-xs text-gray-400 mt-3 italic">Di Tempat</p>
             </div>
-
-            <!-- Tombol Buka Undangan -->
-            <button id="btn-open"
-                class="group relative inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold tracking-wider text-white uppercase transition-all duration-300 bg-transparent border-2 border-bali-gold rounded-full hover:bg-bali-gold hover:text-bali-dark focus:outline-none overflow-hidden shadow-[0_0_15px_rgba(212,175,55,0.3)]">
-                <span
-                    class="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-black"></span>
-                <span class="relative flex items-center gap-3">
-                    <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                    </svg>
-                    Buka Undangan
-                </span>
+            <div id="cover-guest" class="w-full px-4 py-6 relative">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rotate-45" style="background:#C9A84C"></div>
+                <div class="border-t border-b py-5" style="border-color:rgba(201,168,76,.28)">
+                    <p class="text-[11px] tracking-widest uppercase mb-2 font-light" style="color:rgba(245,239,224,.4)">Kepada Yth.</p>
+                    <h2 id="guest-name" class="font-display text-2xl md:text-3xl font-semibold leading-snug" style="color:#C9A84C">Tamu Undangan</h2>
+                    <p class="text-[11px] mt-2 italic font-light" style="color:rgba(245,239,224,.3)">Di Tempat</p>
+                </div>
+                <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-2 h-2 rotate-45" style="background:#C9A84C"></div>
+            </div>
+            <button id="btn-open" class="mt-9 group inline-flex items-center gap-3 px-9 py-3.5 text-xs font-medium tracking-[.2em] uppercase rounded-full transition-all duration-500 focus:outline-none" style="color:#C9A84C;border:1px solid rgba(201,168,76,.6);box-shadow:0 0 24px rgba(201,168,76,.15)">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+                Buka Undangan
             </button>
         </div>
 
-        <!-- Transisi Bentuk Bawah -->
-        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
-            <svg class="relative block w-full h-16 md:h-24 lg:h-32" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path
-                    d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V120H0Z"
-                    class="fill-bali-light opacity-50"></path>
-                <path
-                    d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V120H0Z"
-                    class="fill-bali-light"></path>
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10 pointer-events-none">
+            <svg class="block w-full" style="height:clamp(40px,6vw,80px)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 80" preserveAspectRatio="none">
+                <path d="M0,0V40c150,35,300,40,450,20C600,0,750,-10,900,15c100,17,200,30,300,25V80H0Z" fill="#FAF7F0" fill-opacity=".5"/>
+                <path d="M0,20V55c200,30,400,30,600,5C800,-20,1000,30,1200,45V80H0Z" fill="#FAF7F0"/>
             </svg>
         </div>
     </section>
 
-    <!-- SECTION 2: INFORMASI & PARAGRAF PEMBUKA -->
-    <!-- Diberi class hidden-section yang akan dibuka lewat JS -->
-    <section id="informasi" class="relative py-24 px-6 bg-pattern hidden-section" style="display: none;">
-        <div class="max-w-3xl mx-auto text-center" data-aos="fade-up" data-aos-duration="1200">
-            <!-- Ornamen Bunga Sederhana -->
-            <div class="flex justify-center mb-6 text-bali-gold">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2C12 2 15 7 15 12C15 17 12 22 12 22C12 22 9 17 9 12C9 7 12 2 12 2Z" fill="currentColor"
-                        opacity="0.8" />
-                    <path d="M22 12C22 12 17 9 12 9C7 9 2 12 2 12C2 12 7 15 12 15C17 15 22 12 22 12Z"
-                        fill="currentColor" opacity="0.8" />
-                    <circle cx="12" cy="12" r="3" fill="#2C1E16" />
-                </svg>
-            </div>
+    <!-- INFORMASI -->
+    <section id="informasi" class="hidden-section bg-patra relative py-20 px-6 overflow-hidden" style="display:none">
+        <div class="absolute top-0 left-0 w-28 md:w-40 h-64 z-0 pointer-events-none" style="opacity:.22;background:url('assets/images/ukiran_dark_1789783352249.jpg') left top / contain no-repeat;mix-blend-mode:multiply"></div>
+        <div class="absolute top-0 right-0 w-28 md:w-40 h-64 z-0 pointer-events-none" style="opacity:.22;background:url('assets/images/ukiran_dark_1789783352249.jpg') right top / contain no-repeat;transform:scaleX(-1);mix-blend-mode:multiply"></div>
 
-            <h2 class="font-serif text-3xl md:text-4xl font-bold text-bali-dark mb-8">Om Swastyastu</h2>
-            <p class="text-sm md:text-base leading-loose text-gray-700 mb-12 px-2 md:px-8">
-                Atas Asung Kertha Wara Nugraha Ida Sang Hyang Widhi Wasa / Tuhan Yang Maha Esa, kami bermaksud
-                mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan doa restu pada rangkaian upacara
-                <strong>Melaspas Rumah</strong> kami yang akan diselenggarakan pada:
-            </p>
-
-            <!-- Card Informasi -->
-            <div class="glass-panel rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.05)] p-8 md:p-12 mb-16 border border-white/50 relative overflow-hidden"
-                data-aos="zoom-in-up" data-aos-duration="1200" data-aos-delay="200">
-                <!-- Aksen Card -->
-                <div
-                    class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-bali-earth via-bali-gold to-bali-earth">
-                </div>
-                <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-bali-gold/10 rounded-full blur-2xl"></div>
-                <div class="absolute -top-10 -left-10 w-32 h-32 bg-bali-earth/10 rounded-full blur-2xl"></div>
-
-                <div class="space-y-8 relative z-10">
-                    <div class="flex flex-col items-center">
-                        <div class="p-3 bg-bali-gold/10 rounded-full mb-3 text-bali-gold">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
-                                </path>
-                            </svg>
-                        </div>
-                        <h3 class="font-serif text-xl font-semibold text-bali-dark">Hari & Tanggal</h3>
-                        <p class="text-bali-earth font-medium mt-1 text-lg">Sabtu, 26 September 2026</p>
-                        <p class="text-sm text-gray-500 italic mt-1">(Purnama Kapat)</p>
-                    </div>
-
-                    <div class="w-24 h-px bg-gradient-to-r from-transparent via-bali-gold/50 to-transparent mx-auto">
-                    </div>
-
-                    <div class="flex flex-col items-center">
-                        <div class="p-3 bg-bali-gold/10 rounded-full mb-3 text-bali-gold">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="font-serif text-xl font-semibold text-bali-dark">Waktu</h3>
-                        <p class="text-bali-earth font-medium mt-1 text-lg">12.00 Wita - Selesai</p>
-                    </div>
-
-                    <div class="w-24 h-px bg-gradient-to-r from-transparent via-bali-gold/50 to-transparent mx-auto">
-                    </div>
-
-                    <div class="flex flex-col items-center">
-                        <div class="p-3 bg-bali-gold/10 rounded-full mb-3 text-bali-gold">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
-                                </path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="font-serif text-xl font-semibold text-bali-dark">Tempat</h3>
-                        <p class="text-gray-800 mt-2 font-medium text-lg">Kediaman Kami - Wana Panti</p>
-                        <p class="text-sm text-gray-600 mt-2 max-w-md mx-auto leading-relaxed">Perumahan The Wana Panti
-                            Residence, No 5.7 A, Pandak Gede, Kediri, Tabanan.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Peta Lokasi -->
-            <div class="w-full relative z-10" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                <h3 class="font-serif text-2xl font-bold text-bali-dark mb-6">Peta Lokasi</h3>
-                <div class="rounded-2xl overflow-hidden shadow-xl border-4 border-white mb-8 bg-gray-200">
-                    <!-- Ganti src iframe di bawah ini dengan embed Google Maps lokasi rumah Anda -->
-                    <iframe
-                        src="https://maps.google.com/maps?q=-8.5934905,115.1194093&t=&z=19&ie=UTF8&iwloc=&output=embed"
-                        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-
-                <!-- Ganti href dengan link asli Google Maps -->
-                <a href="https://www.google.com/maps/dir/?api=1&destination=-8.5934905,115.1194093" target="_blank"
-                    class="inline-flex items-center gap-2 px-8 py-3.5 bg-bali-dark text-white text-sm font-medium rounded-full hover:bg-bali-gold hover:-translate-y-1 transition-all duration-300 shadow-[0_5px_15px_rgba(0,0,0,0.2)]">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7">
-                        </path>
-                    </svg>
-                    Buka Petunjuk Lokasi
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 3: DUDONAN ACARA -->
-    <section class="py-24 px-6 bg-white hidden-section relative overflow-hidden" style="display: none;">
-        <!-- Latar Belakang Dekoratif -->
-        <div
-            class="absolute top-0 right-0 w-64 h-64 bg-bali-gold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4">
-        </div>
-        <div
-            class="absolute bottom-0 left-0 w-80 h-80 bg-bali-earth/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4">
-        </div>
-
-        <div class="max-w-3xl mx-auto relative z-10" data-aos="fade-up" data-aos-duration="1000">
+        <div class="max-w-2xl mx-auto relative z-10">
             <div class="text-center mb-12">
-                <p class="text-sm font-medium tracking-widest text-bali-earth uppercase mb-2">Rangkaian</p>
-                <h2 class="font-serif text-3xl md:text-4xl font-bold text-bali-dark mb-4">Dudonan Acara</h2>
-                <div class="w-16 h-1 bg-bali-gold mx-auto rounded-full mb-4"></div>
-                <p class="text-gray-500 text-sm">Susunan upacara yang akan dilaksanakan</p>
+                <div data-reveal class="inline-flex items-center gap-3 mb-5">
+                    <span class="w-8 h-px" style="background:rgba(201,168,76,.4)"></span>
+                    <span class="text-[10px] tracking-[.35em] uppercase font-medium" style="color:rgba(122,74,34,.7)">Undangan Kami</span>
+                    <span class="w-8 h-px" style="background:rgba(201,168,76,.4)"></span>
+                </div>
+                <h2 data-reveal data-delay="100" class="font-display text-4xl md:text-5xl font-bold mb-3" style="color:#2C1A0E">Om Swastyastu</h2>
+                <div data-reveal data-delay="200" class="w-10 h-0.5 mx-auto mt-4 mb-6" style="background:#C9A84C"></div>
+                <p data-reveal data-delay="300" class="text-sm md:text-base leading-relaxed px-2 max-w-lg mx-auto font-light" style="color:rgba(44,26,14,.65)">
+                    Atas Asung Kertha Wara Nugraha Ida Sang Hyang Widhi Wasa, kami bermaksud mengundang
+                    Bapak&nbsp;/ Ibu&nbsp;/ Saudara&nbsp;/&nbsp;i untuk hadir dan memberikan doa restu
+                    pada rangkaian upacara <strong class="font-semibold" style="color:#7A4A22">Melaspas Rumah</strong> kami yang akan diselenggarakan pada:
+                </p>
             </div>
 
-            <!-- Tabel Dudonan -->
-            <div
-                class="overflow-hidden rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 bg-white">
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-gradient-to-r from-bali-dark to-gray-800 text-white">
-                                <th
-                                    class="py-3 px-2 md:py-5 md:px-6 text-center font-semibold w-10 md:w-16 text-[10px] md:text-sm uppercase tracking-wider">
-                                    No
-                                </th>
-                                <th
-                                    class="py-3 px-2 md:py-5 md:px-6 font-semibold w-1/4 md:w-1/3 text-[10px] md:text-sm uppercase tracking-wider">
-                                    Waktu
-                                </th>
-                                <th
-                                    class="py-3 px-2 md:py-5 md:px-6 font-semibold w-1/4 md:w-1/3 text-[10px] md:text-sm uppercase tracking-wider">
-                                    Tanggal
-                                </th>
-                                <th
-                                    class="py-3 px-2 md:py-5 md:px-6 font-semibold text-[10px] md:text-sm uppercase tracking-wider">
-                                    Kegiatan</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-xs md:text-base text-gray-700 divide-y divide-gray-100">
-                            <tr class="hover:bg-bali-light/50 transition-colors duration-200 group">
-                                <td
-                                    class="py-3 px-2 md:py-5 md:px-6 text-center font-medium text-gray-400 group-hover:text-bali-gold transition-colors align-top">
-                                    1</td>
-                                <td
-                                    class="py-3 px-2 md:py-5 md:px-6 text-bali-earth font-medium md:whitespace-nowrap align-top">
-                                    08.00 - Selesai
-                                </td>
-                                <td
-                                    class="py-3 px-2 md:py-5 md:px-6 font-medium text-bali-earth md:whitespace-nowrap align-top">
-                                    25 Sep 2026</td>
-                                <td class="py-3 px-2 md:py-5 md:px-6 font-medium text-gray-800 align-top">Mepenangkilan
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-bali-light/50 transition-colors duration-200 group">
-                                <td
-                                    class="py-3 px-2 md:py-5 md:px-6 text-center font-medium text-gray-400 group-hover:text-bali-gold transition-colors align-top">
-                                    2</td>
-                                <td
-                                    class="py-3 px-2 md:py-5 md:px-6 text-bali-earth font-medium md:whitespace-nowrap align-top">
-                                    12.00 - Selesai
-                                </td>
-                                <td
-                                    class="py-3 px-2 md:py-5 md:px-6 font-medium text-bali-earth md:whitespace-nowrap align-top">
-                                    26 Sep 2026</td>
-                                <td class="py-3 px-2 md:py-5 md:px-6 font-medium text-gray-800 align-top">Melaspas</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <!-- Gambar rumah 2 — Ganti src dengan foto rumah Anda -->
+            <div data-reveal="scale" data-delay="100" class="mb-12 rounded-2xl overflow-hidden" style="box-shadow:0 12px 48px rgba(26,16,8,.12);border:2px solid rgba(201,168,76,.2)">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Rumah" class="w-full h-52 md:h-72 object-cover transition-transform duration-700 hover:scale-105">
+            </div>
+
+            <div class="grid grid-cols-1 gap-5">
+                <div data-reveal data-delay="100" class="glass-card rounded-2xl p-6 flex items-start gap-5" style="border-top:3px solid #C9A84C">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style="background:rgba(201,168,76,.1);color:#C9A84C">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-widest mb-1 font-medium" style="color:rgba(122,74,34,.6)">Hari &amp; Tanggal</p>
+                        <p class="font-display text-xl font-semibold" style="color:#2C1A0E">Sabtu, 26 September 2026</p>
+                        <p class="text-xs mt-1 italic" style="color:rgba(122,74,34,.5)">(Purnama Kapat)</p>
+                    </div>
+                </div>
+                <div data-reveal data-delay="200" class="glass-card rounded-2xl p-6 flex items-start gap-5" style="border-top:3px solid #C9A84C">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style="background:rgba(201,168,76,.1);color:#C9A84C">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-widest mb-1 font-medium" style="color:rgba(122,74,34,.6)">Waktu</p>
+                        <p class="font-display text-xl font-semibold" style="color:#2C1A0E">12.00 Wita – Selesai</p>
+                    </div>
+                </div>
+                <div data-reveal data-delay="300" class="glass-card rounded-2xl p-6 flex items-start gap-5" style="border-top:3px solid #C9A84C">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style="background:rgba(201,168,76,.1);color:#C9A84C">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-widest mb-1 font-medium" style="color:rgba(122,74,34,.6)">Tempat</p>
+                        <p class="font-display text-xl font-semibold" style="color:#2C1A0E">Kediaman Kami – Wana Panti</p>
+                        <p class="text-sm mt-1.5 leading-relaxed" style="color:rgba(122,74,34,.7)">Perumahan The Wana Panti Residence, No 5.7 A,<br>Pandak Gede, Kediri, Tabanan.</p>
+                    </div>
                 </div>
             </div>
 
-            <!-- Paragraf Penutup -->
-            <div class="mt-20 text-center" data-aos="zoom-in" data-aos-duration="1200">
-                <div class="inline-block p-4 rounded-full bg-bali-light mb-8">
-                    <svg class="w-8 h-8 text-bali-gold" fill="currentColor" viewBox="0 0 24 24">
-                        <path
-                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                    </svg>
+            <div data-reveal data-delay="200" class="mt-10">
+                <p class="text-[10px] uppercase tracking-widest text-center mb-4 font-medium" style="color:rgba(122,74,34,.5)">Peta Lokasi</p>
+                <div class="rounded-2xl overflow-hidden mb-5" style="box-shadow:0 8px 32px rgba(26,16,8,.1);border:1.5px solid rgba(201,168,76,.18)">
+                    <iframe src="https://maps.google.com/maps?q=-8.5934905,115.1194093&t=&z=19&ie=UTF8&iwloc=&output=embed"
+                        width="100%" height="280" style="border:0" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" title="Peta lokasi"></iframe>
                 </div>
-                <p class="text-sm md:text-base leading-relaxed text-gray-600 mb-6 max-w-2xl mx-auto">
-                    Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir
-                    untuk memberikan doa restu pada upacara Melaspas Rumah kami.
-                </p>
-                <p class="text-sm md:text-base leading-relaxed text-gray-600 mb-10">
-                    Atas kehadiran dan doa restunya, kami mengucapkan terima kasih.
-                </p>
-
-                <h3 class="font-serif text-2xl md:text-3xl font-bold text-bali-gold mb-3 tracking-wide">Om Santih,
-                    Santih, Santih, Om</h3>
-
-                <div class="mt-12">
-                    <p class="text-xs text-gray-400 uppercase tracking-widest mb-2">Kami yang berbahagia,</p>
-                    <p class="font-serif text-xl md:text-2xl text-bali-dark font-semibold">Keluarga Bapak I Gede Made
-                        Asmara
-                    </p>
+                <div class="text-center">
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=-8.5934905,115.1194093" target="_blank" rel="noopener"
+                        class="inline-flex items-center gap-2 px-7 py-3 text-xs font-medium tracking-widest uppercase rounded-full transition-all duration-300 hover:-translate-y-0.5"
+                        style="background:#C9A84C;color:#1A1008;box-shadow:0 4px 18px rgba(201,168,76,.3)">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+                        Buka Petunjuk Arah
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-bali-dark border-t border-bali-gold/20 text-white py-8 text-center hidden-section"
-        style="display: none;">
-        <div class="max-w-4xl mx-auto px-6">
-            <p class="text-sm text-gray-400">Developed by <a href="https://adhyprimamerta.my.id" target="_blank"
-                    class="text-bali-gold hover:text-white transition-colors duration-200 hover:underline">Adhypr</a>.
-            </p>
-            <p class="text-sm text-gray-400">© 2026.</p>
+    <!-- DUDONAN -->
+    <section class="hidden-section relative py-20 px-6 overflow-hidden" style="display:none;background-color:#1A1008">
+        <div class="absolute inset-0 z-0 pointer-events-none" style="opacity:.07;background:url('assets/images/ukiran_dark_1789783352249.jpg') center / cover repeat;mix-blend-mode:screen"></div>
+        <div class="max-w-2xl mx-auto relative z-10">
+            <div class="text-center mb-10">
+                <div data-reveal class="inline-flex items-center gap-3 mb-5">
+                    <span class="w-8 h-px" style="background:rgba(201,168,76,.35)"></span>
+                    <span class="text-[10px] tracking-[.35em] uppercase font-medium" style="color:rgba(201,168,76,.55)">Rangkaian</span>
+                    <span class="w-8 h-px" style="background:rgba(201,168,76,.35)"></span>
+                </div>
+                <h2 data-reveal data-delay="100" class="font-display text-4xl md:text-5xl font-bold mb-4" style="color:#F5EFE0">Dudonan Acara</h2>
+                <div data-reveal data-delay="200" class="w-10 h-0.5 mx-auto" style="background:#C9A84C"></div>
+            </div>
+
+            <div data-reveal data-delay="100" class="dudonan-table overflow-hidden rounded-2xl" style="border:1px solid rgba(201,168,76,.18);box-shadow:0 8px 48px rgba(0,0,0,.45)">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr style="background:linear-gradient(135deg,#2C1A0E,#1A1008)">
+                            <th class="py-4 px-3 md:py-5 md:px-6 text-center font-medium text-[11px] uppercase tracking-wider w-10 md:w-14" style="color:#C9A84C">No</th>
+                            <th class="py-4 px-3 md:py-5 md:px-6 font-medium text-[11px] uppercase tracking-wider w-1/4" style="color:#C9A84C">Waktu</th>
+                            <th class="py-4 px-3 md:py-5 md:px-6 font-medium text-[11px] uppercase tracking-wider w-1/4" style="color:#C9A84C">Tanggal</th>
+                            <th class="py-4 px-3 md:py-5 md:px-6 font-medium text-[11px] uppercase tracking-wider" style="color:#C9A84C">Kegiatan</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-xs md:text-sm divide-y" style="border-color:rgba(201,168,76,.08)">
+                        <tr data-reveal data-delay="100" class="transition-colors duration-200" style="background:rgba(255,252,244,.03)">
+                            <td class="py-4 px-3 md:py-5 md:px-6 text-center font-medium" style="color:rgba(201,168,76,.4)">1</td>
+                            <td class="py-4 px-3 md:py-5 md:px-6 font-medium" style="color:#E8CC80">08.00 – Selesai</td>
+                            <td class="py-4 px-3 md:py-5 md:px-6" style="color:rgba(245,239,224,.5)">25 Sep 2026</td>
+                            <td class="py-4 px-3 md:py-5 md:px-6 font-medium" style="color:rgba(245,239,224,.85)">Mepenangkilan</td>
+                        </tr>
+                        <tr data-reveal data-delay="200" class="transition-colors duration-200" style="background:rgba(201,168,76,.025)">
+                            <td class="py-4 px-3 md:py-5 md:px-6 text-center font-medium" style="color:rgba(201,168,76,.4)">2</td>
+                            <td class="py-4 px-3 md:py-5 md:px-6 font-medium" style="color:#E8CC80">12.00 – Selesai</td>
+                            <td class="py-4 px-3 md:py-5 md:px-6" style="color:rgba(245,239,224,.5)">26 Sep 2026</td>
+                            <td class="py-4 px-3 md:py-5 md:px-6 font-medium" style="color:rgba(245,239,224,.85)">Melaspas</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Gambar rumah 3 — Ganti src dengan foto rumah Anda -->
+            <div data-reveal data-delay="200" class="mt-12 mb-12 rounded-2xl overflow-hidden" style="box-shadow:0 12px 48px rgba(0,0,0,.5);border:1.5px solid rgba(201,168,76,.18)">
+                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Rumah" class="w-full h-52 md:h-72 object-cover transition-transform duration-700 hover:scale-105">
+            </div>
+
+            <div data-reveal class="text-center">
+                <div class="patra-line mb-8">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#C9A84C" style="opacity:.6">
+                        <path d="M12 2 Q16 12 12 22 Q8 12 12 2Z"/><path d="M2 12 Q12 8 22 12 Q12 16 2 12Z"/>
+                        <circle cx="12" cy="12" r="2" fill="#C9A84C"/>
+                    </svg>
+                </div>
+                <p data-reveal data-delay="100" class="text-sm md:text-base leading-loose mb-4 max-w-md mx-auto font-light" style="color:rgba(245,239,224,.55)">
+                    Merupakan suatu kehormatan bagi kami apabila Bapak&nbsp;/&nbsp;Ibu&nbsp;/&nbsp;Saudara&nbsp;/&nbsp;i
+                    berkenan hadir untuk memberikan doa restu pada upacara Melaspas Rumah kami.
+                </p>
+                <p data-reveal data-delay="200" class="text-xs mb-10 font-light italic" style="color:rgba(245,239,224,.32)">Atas kehadiran dan doa restunya, kami mengucapkan terima kasih.</p>
+                <h3 data-reveal data-delay="300" class="font-display text-2xl md:text-3xl text-shimmer mb-8 font-semibold">Om Santih, Santih, Santih, Om</h3>
+                <div data-reveal data-delay="400" class="patra-line mb-6"></div>
+                <div data-reveal data-delay="500">
+                    <p class="text-[10px] uppercase tracking-[.3em] mb-2 font-light" style="color:rgba(245,239,224,.25)">Kami yang berbahagia</p>
+                    <p class="font-display text-xl md:text-2xl font-semibold" style="color:rgba(245,239,224,.88)">Keluarga Bapak I Gede Made Asmara</p>
+                </div>
+            </div>
         </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="hidden-section py-7 text-center" style="display:none;background:#1A1008;border-top:1px solid rgba(201,168,76,.1)">
+        <p class="text-xs font-light" style="color:rgba(245,239,224,.28)">
+            Developed by <a href="https://adhyprimamerta.my.id" target="_blank" rel="noopener" style="color:rgba(201,168,76,.6)">Adhypr</a>. &copy; 2026.
+        </p>
     </footer>
 
-    <!-- Tombol Audio Control (Floating) -->
-    <button id="audio-control"
-        class="fixed bottom-6 right-6 z-50 p-3.5 bg-white text-bali-dark rounded-full shadow-[0_8px_30px_rgba(0,0,0,0.15)] border border-gray-100 transition-all duration-300 hover:scale-110 hover:bg-bali-gold hover:text-white hover:border-transparent hidden-section group"
-        style="display: none;" title="Play/Pause Music">
-        <!-- Icon Play (Awalnya hidden) -->
-        <svg id="icon-play" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z">
-            </path>
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-        </svg>
-        <!-- Icon Pause -->
-        <svg id="icon-pause" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-        </svg>
-
-        <!-- Ripple Effect saat play -->
-        <span id="audio-ripple"
-            class="absolute inset-0 rounded-full border border-bali-gold animate-ping opacity-75"></span>
+    <!-- AUDIO BUTTON -->
+    <button id="audio-control" class="hidden-section fixed bottom-6 right-6 z-50 w-11 h-11 flex items-center justify-center rounded-full transition-all duration-300 hover:scale-110 focus:outline-none" style="display:none;background:rgba(26,16,8,.88);border:1px solid rgba(201,168,76,.35);box-shadow:0 4px 20px rgba(0,0,0,.35)" title="Play/Pause Music">
+        <svg id="icon-play" class="w-4 h-4 hidden" fill="none" stroke="#C9A84C" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <svg id="icon-pause" class="w-4 h-4" fill="none" stroke="#C9A84C" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <span id="audio-ripple" class="absolute inset-0 rounded-full border animate-ping" style="border-color:rgba(201,168,76,.5);opacity:0"></span>
     </button>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // 1. Inisialisasi AOS (Animate On Scroll)
-        AOS.init({
-            once: true, // Animasi berjalan sekali saja saat scroll
-            offset: 50,
-            easing: 'ease-out-cubic',
+    (function(){
+        'use strict';
+        // Guest name
+        var params=new URLSearchParams(window.location.search),raw=params.get('to');
+        if(raw){var el=document.getElementById('guest-name');if(el)el.textContent=raw.replace(/\+/g,' ').trim();}
+
+        // Cover load reveal
+        ['cover-supra','cover-sub','cover-title','cover-photo','cover-guest'].forEach(function(id,i){
+            var el=document.getElementById(id);if(!el)return;
+            el.style.opacity='0';el.style.transform='translateY(20px)';
+            el.style.transition='opacity .85s ease,transform .85s ease';
+            el.style.transitionDelay=(i*.13)+'s';
+            requestAnimationFrame(function(){requestAnimationFrame(function(){el.style.opacity='1';el.style.transform='translateY(0)';});});
         });
 
-        // 2. Ambil parameter URL untuk nama tamu (?to=Nama+Tamu)
-        const urlParams = new URLSearchParams(window.location.search);
-        const guestName = urlParams.get('to');
-        if (guestName) {
-            // Hilangkan karakter khusus dan replace spasi/plus
-            const formattedName = guestName.replace(/\+/g, ' ');
-            // Hindari XSS dengan createTextNode
-            document.getElementById('guest-name').innerText = formattedName;
+        // IntersectionObserver reveal
+        var obs=new IntersectionObserver(function(entries){
+            entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-visible');obs.unobserve(e.target);}});
+        },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+        function observeAll(){document.querySelectorAll('[data-reveal]:not(.is-visible)').forEach(function(el){obs.observe(el);});}
+        observeAll();
+
+        // Parallax
+        var gebyog=document.getElementById('ornament-gebyog'),
+            pL=document.getElementById('ornament-penjor-l'),
+            pR=document.getElementById('ornament-penjor-r'),
+            noMotion=window.matchMedia('(prefers-reduced-motion:reduce)').matches,
+            tick=false;
+        if(!noMotion){
+            window.addEventListener('scroll',function(){
+                if(tick)return;tick=true;
+                requestAnimationFrame(function(){
+                    var sy=window.scrollY;
+                    if(gebyog)gebyog.style.transform='translateY('+(sy*.18)+'px)';
+                    if(pL)pL.style.transform='translateY('+(sy*.09)+'px)';
+                    if(pR)pR.style.transform='translateY('+(sy*.09)+'px) scaleX(-1)';
+                    tick=false;
+                });
+            },{passive:true});
         }
 
-        // 3. Logika Buka Undangan
-        const btnOpen = document.getElementById('btn-open');
-        const hiddenSections = document.querySelectorAll('.hidden-section');
-        const bgMusic = document.getElementById('bg-music');
-        const audioControl = document.getElementById('audio-control');
-        const iconPlay = document.getElementById('icon-play');
-        const iconPause = document.getElementById('icon-pause');
-        const audioRipple = document.getElementById('audio-ripple');
-        let isMusicPlaying = false;
+        // Buka undangan
+        var btnOpen=document.getElementById('btn-open'),
+            hidden=document.querySelectorAll('.hidden-section'),
+            music=document.getElementById('bg-music'),
+            ctrl=document.getElementById('audio-control'),
+            iPlay=document.getElementById('icon-play'),
+            iPause=document.getElementById('icon-pause'),
+            ripple=document.getElementById('audio-ripple'),
+            playing=false;
 
-        btnOpen.addEventListener('click', () => {
-            // Tampilkan section yang tersembunyi
-            hiddenSections.forEach(section => {
-                section.style.display = 'block';
-            });
-
-            // Refresh AOS setelah elemen ditampilkan (karena awalnya display:none)
-            setTimeout(() => {
-                AOS.refresh();
-            }, 100);
-
-            // Scroll ke bagian informasi perlahan
-            document.getElementById('informasi').scrollIntoView({ behavior: 'smooth' });
-
-            // Coba mainkan musik
-            bgMusic.play().then(() => {
-                isMusicPlaying = true;
-                iconPlay.classList.add('hidden');
-                iconPause.classList.remove('hidden');
-                audioRipple.style.display = 'block';
-            }).catch(error => {
-                console.log("Autoplay dicegah oleh browser. Pengguna harus menekan tombol play.", error);
-                iconPlay.classList.remove('hidden');
-                iconPause.classList.add('hidden');
-                audioRipple.style.display = 'none';
-            });
-
-            // Opsional: Hilangkan tombol buka undangan setelah diklik agar tidak menumpuk
-            btnOpen.style.display = 'none';
+        btnOpen.addEventListener('click',function(){
+            hidden.forEach(function(s){s.style.display='block';});
+            setTimeout(function(){observeAll();document.getElementById('informasi').scrollIntoView({behavior:'smooth'});},60);
+            music.play().then(function(){playing=true;iPlay.classList.add('hidden');iPause.classList.remove('hidden');ripple.style.opacity='.75';}).catch(function(){iPlay.classList.remove('hidden');iPause.classList.add('hidden');});
+            btnOpen.style.opacity='0';btnOpen.style.pointerEvents='none';
         });
 
-        // 4. Logika Control Audio (Play/Pause)
-        audioControl.addEventListener('click', () => {
-            if (isMusicPlaying) {
-                bgMusic.pause();
-                iconPlay.classList.remove('hidden');
-                iconPause.classList.add('hidden');
-                audioRipple.style.display = 'none';
-            } else {
-                bgMusic.play();
-                iconPlay.classList.add('hidden');
-                iconPause.classList.remove('hidden');
-                audioRipple.style.display = 'block';
-            }
-            isMusicPlaying = !isMusicPlaying;
+        ctrl.addEventListener('click',function(){
+            if(playing){music.pause();iPlay.classList.remove('hidden');iPause.classList.add('hidden');ripple.style.opacity='0';}
+            else{music.play();iPlay.classList.add('hidden');iPause.classList.remove('hidden');ripple.style.opacity='.75';}
+            playing=!playing;
         });
+    })();
     </script>
 </body>
-
 </html>
